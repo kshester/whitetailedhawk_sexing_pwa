@@ -1,0 +1,147 @@
+:root {
+  --bg: #0b1220;
+  --card: #101a2e;
+  --text: #eef2ff;
+  --muted: #b8c0d9;
+  --border: rgba(255,255,255,0.12);
+
+  --male: rgba(120, 190, 255, 0.25);
+  --female: rgba(255, 160, 190, 0.25);
+  --borderline: rgba(255, 235, 130, 0.28);
+  --neutral: rgba(255,255,255,0.06);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: radial-gradient(1000px 700px at 20% 0%, #13254a 0%, var(--bg) 45%);
+  color: var(--text);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.card {
+  width: min(520px, 100%);
+  background: rgba(16, 26, 46, 0.88);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px 18px 14px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+  backdrop-filter: blur(8px);
+}
+
+h1 {
+  margin: 0 0 6px;
+  font-size: 1.4rem;
+}
+
+.sub {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.inputs {
+  display: grid;
+  gap: 12px;
+  margin: 10px 0 14px;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+input {
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(0,0,0,0.22);
+  color: var(--text);
+  font-size: 1.05rem;
+  outline: none;
+}
+
+input:focus {
+  border-color: rgba(120,190,255,0.65);
+  box-shadow: 0 0 0 3px rgba(120,190,255,0.18);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 6px 0 14px;
+}
+
+button {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(120,190,255,0.22);
+  color: var(--text);
+  font-size: 1.05rem;
+  font-weight: 650;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button.ghost {
+  background: rgba(255,255,255,0.06);
+}
+
+.output {
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  padding: 12px 12px;
+  background: var(--neutral);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 4px;
+}
+
+.label {
+  color: var(--muted);
+}
+
+.value {
+  font-weight: 750;
+}
+
+.hint {
+  margin: 8px 4px 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.footnote {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+details summary {
+  cursor: pointer;
+}
+
+.formula {
+  margin: 8px 0 0;
+}
+
+.output.male { background: var(--male); }
+.output.female { background: var(--female); }
+.output.borderline { background: var(--borderline); }
+.output.neutral { background: var(--neutral); }
