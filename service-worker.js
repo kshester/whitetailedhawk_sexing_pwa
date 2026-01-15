@@ -1,6 +1,6 @@
 // Simple offline-first service worker for GitHub Pages
 
-const CACHE_NAME = "hawk-sexing-v2";
+const CACHE_NAME = "hawk-sexing-v3";
 const ASSETS = [
   "./",
   "./index.html",
