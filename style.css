@@ -188,3 +188,11 @@ details summary {
   color: rgba(238, 242, 255, 0.85);
 }
 
+
+.inputs label {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 10px;
+}
+
